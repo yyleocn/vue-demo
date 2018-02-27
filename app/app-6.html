@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div contenteditable="true" v-on:input="inputHandler" v-once="">
+        {{ content }}
+    </div>
+    <br>
+    <div>{{ content }}</div>
+</div>
+
+<script>
+    let app6 = new Vue({
+        el: '#app',
+        data: {
+            content: 'Div content editable.',
+        },
+        methods: {
+            inputHandler (event_) {
+                this.content = event_.currentTarget.innerText;
+            },
+        }
+    });
+</script>
+</body>
+</html>
