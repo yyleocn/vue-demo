@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/vue.js"></script>
+    <script src="../vue.js"></script>
 </head>
 <body>
 <div id="app">
@@ -23,6 +23,7 @@
         methods: {
             inputHandler (event_) {
                 this.content = event_.currentTarget.innerText;
+                console.log(this.content);
             },
         }
     });
